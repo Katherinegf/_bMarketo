@@ -18,12 +18,24 @@ html, body {
   border: 1px solid #FA3150 !important;
 }
 
+.position-static {
+  position: static;
+}
+
+.position-fixed-bottom {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .btn-toggle {
   font-family: "Poppins", sans-serif;
   font-size: 1.8em;
   padding: 0 !important;
   background-color: transparent;
   border: none !important;
+  text-decoration: none;
 }
 .btn-toggle:hover {
   color: #202020 !important;
@@ -31,11 +43,13 @@ html, body {
 }
 
 .btn-toggle-white {
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
   font-size: 1.8em;
   padding: 0 !important;
   background-color: transparent;
   border: none !important;
+  text-decoration: none;
 }
 .btn-toggle-white:hover {
   color: #636363 !important;
@@ -43,11 +57,13 @@ html, body {
 }
 
 .btn-outline-white {
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
   padding: 10px 25px;
   border: 1px solid #636363;
   background-color: white;
   color: #636363;
+  text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
 .btn-outline-white:hover {
@@ -57,11 +73,13 @@ html, body {
 }
 
 .btn-outline-dark {
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
   padding: 10px 25px;
   border: 0px solid white;
   background-color: transparent;
   color: white;
+  text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
 .btn-outline-dark:hover {
@@ -71,11 +89,13 @@ html, body {
 }
 
 .btn-theme {
+  cursor: pointer;
   font-family: "Poppins", sans-serif;
   padding: 10px 35px;
   border: 1px solid #FA3150;
   background-color: #FA3150;
   color: white;
+  text-decoration: none;
   transition: all 0.25s ease-in-out;
 }
 .btn-theme:hover {
@@ -600,22 +620,22 @@ footer .container {
   height: auto;
 }
 
-.best-collection {
+.grid-collection {
   padding: 40px 20px;
 }
-.best-collection .collection-title {
+.grid-collection .title {
   text-align: center;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif !important;
   font-weight: 600;
   font-size: 38px;
   color: #292929;
 }
 @media (min-width: 768px) {
-  .best-collection .collection-title {
+  .grid-collection .title {
     font-size: 48px;
   }
 }
-.best-collection .categories {
+.grid-collection .categories {
   display: none;
   justify-content: center;
   list-style: none;
@@ -623,39 +643,39 @@ footer .container {
   padding: 0;
 }
 @media (min-width: 992px) {
-  .best-collection .categories {
+  .grid-collection .categories {
     display: flex;
   }
 }
-.best-collection .categories .category-item {
+.grid-collection .categories .category-item {
   margin-right: 5px;
 }
-.best-collection .categories .category-item + li::before {
+.grid-collection .categories .category-item + li::before {
   content: "/";
   margin-right: 5px;
 }
-.best-collection .collection-grid {
+.grid-collection .grid {
   margin-top: 40px;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   gap: 40px;
 }
 @media (min-width: 768px) {
-  .best-collection .collection-grid {
+  .grid-collection .grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 992px) {
-  .best-collection .collection-grid {
+  .grid-collection .grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 @media (min-width: 1200px) {
-  .best-collection .collection-grid {
+  .grid-collection .grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-.best-collection .load-more {
+.grid-collection .load-more {
   margin-top: 40px;
   text-align: center;
 }

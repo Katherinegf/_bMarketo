@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using WebbApp.ViewModels;
 
 namespace WebbApp.Controllers
 {
@@ -7,8 +8,15 @@ namespace WebbApp.Controllers
     {
         public IActionResult Index()
         {
-            ViewData["Title"] = "Products";
-            return View();
+            var viewModel = new ProductsIndexViewModel
+            {
+                All = new GridCollectionViewModel
+                {
+                    Title = "All Products",
+                    Categories = new List<string> {"All", "Mobile", "Computers"}
+                }
+            };
+            return View(viewModel);
         }
 
         public IActionResult Search()

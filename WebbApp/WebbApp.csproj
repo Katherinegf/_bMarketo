@@ -11,13 +11,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Models\" />
+    <Folder Include="wwwroot\css\" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
     <None Include="wwwroot\scss\components\_base.scss" />
-    <None Include="wwwroot\scss\components\_bestcollection.scss" />
+    <None Include="wwwroot\scss\components\_gridcollection.scss" />
     <None Include="wwwroot\scss\components\_breadcrumb.scss" />
     <None Include="wwwroot\scss\components\_buttons.scss" />
     <None Include="wwwroot\scss\components\_collectioncontent.scss" />
